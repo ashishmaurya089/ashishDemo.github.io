@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.topnav{
+
+    display: flex;
+    background-color:slategrey;
+    height: 70px;
+    width: 100%;
+}
+.logo{
+    height: 40px;
+    width: 30px;
+    margin: 11px 32% 10px 40px;
+}
+.logo a{
+    border-radius: 20px ;
+    padding: 5px 15px ;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    background-color: white;
+}
+.navitem{
+    height: 20px;
+    padding: 10px;
+    margin: 15px 20px 20px 0px;  
+    text-decoration: none;
+}
+.navitem a{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+}
+.navitem a:hover{
+    color:orangered;
+}
+#myaccountbutton a{
+    margin: 20px;
+    padding: 10px 25px;
+    color: steelblue;
+    background-color: rgb(240, 255, 255);
+    border-radius: 50px;
+}
+#myaccountbutton a:hover{
+    background-color:orangered;
+    color: white;
+}
+/* ================Part 2==========*/
+* { 
+    margin: 0; 
+    padding: 0; 
+    font-family: consolas; 
+} 
+section { 
+    position: relative; 
+    width: 100%; 
+    height: 590px; 
+    overflow: hidden; 
+    background: #111; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+section h2 { 
+    font-size: 100px; 
+    color:#333;
+    background-color: black; 
+    padding: 10px 50px;
+    border-radius: 20px;
+} 
+section span { 
+    position: absolute; 
+    bottom: -50px; 
+    background: transparent; 
+    border-radius: 50%; 
+
+    pointer-events: none; 
+    box-shadow: inset 0 0 50px orange;  
+     
+} 
+ 
+@keyframes animation {  
+    100% { 
+        transform: translateY(-500%); 
+    } 
+} 

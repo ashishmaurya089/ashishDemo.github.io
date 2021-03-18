@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- ============== MenuBar==============  -->
+<div>   
+    <nav class="topnav">
+        <div class="logo"><a href="">ASHISH</a></div>
+        <div class="navitem"><a href="">Tools</a></div>
+        <div class="navitem"><a href="">Resume</a></div>
+        <div class="navitem"><a href="">CV</a></div>
+        <div class="navitem"><a href="">Cover Letter</a></div>
+        <div class="navitem"><a href="">Career Blog</a></div>
+        <div class="navitem" ><a href="">About</a></div>
+        <div class="navitem" id="myaccountbutton"><a href="">MY ACCOUNT</a></div>
+    </nav>
+</div>
+
+  <!--============== Part 2 start button==============  -->
+<div>
+    <div class="headpart2">
+        <h1>The Online Resume Builder You Deserve</h1>
+        <p>Creating a Professional Resume and Cover Letter Has<br>Never Been<span id="easy"> So Easy</span</p>
+    </div>
+
+    <div class="startpart2" id="startpart2">
+        <a href="">Get Start</a>
+    </div>
+</div>
+
+  <!--============== Part 3 img slider==============  -->
+ <div class="sliderbox">
+    <div class="sliderImg">
+        <img class="mySlides" src="img/1.jpg">
+        <img class="mySlides" src="img/2.jpg">
+        <img class="mySlides" src="img/5.jpg">
+        <img class="mySlides" src="img/4.jpg">
+    </div>
+</div>
+  <!--============== Part 4 ==============  -->
+<div class="part4">
+    <div class="buttonGame">
+        <a href="bubble.html" target="blank">Bubble</a>
+        <a href="tictakgame.html" target="blank">Tic Tac Toe Game </a>
+        <a href="snakegame.html" target="blank">Snake Game</a>
+    </div>
+
+</div>
+  
+<!--============== Part 5 ==============  -->
+<div class="cvpart" >
+    <div class="cvpart5">
+        <a href=""><img src="img/Barcelona.jpg"></a>
+        <a href=""><img src="img/California_small.jpg"></a>
+        <a href=""><img src="img/basic-2.jpg"></a>
+        
+    </div>
+    <div class="cvpart5">
+        <a href="" style="text-decoration: none;"><h1>Barcelona</h1></a>
+        <a href="" style="text-decoration: none;"><h1>California</h1></a>
+        <a href="" style="text-decoration: none;"><h1>Basic</h1></a>
+        
+    </div>
+    <div class="cvpart5">
+        <a href=""><img src="img/Global_Citizen_Green_small.jpg"></a>
+        <a href=""><img src="img/rb1.jpg"></a>
+        <a href=""><img src="img/London.jpg"></a>
+    </div>
+    <div class="cvpart5">
+        <a href="" style="text-decoration: none;"><h1>Global Citizen</h1></a>
+        <a href="" style="text-decoration: none;"><h1>London</h1></a>
+        <a href="" style="text-decoration: none;"><h1>Traditional</h1></a>
+        
+    </div>
+    <div class="cvpart5">
+        <a href=""><img src="img/Miami.jpg"></a>
+        <a href=""><img src="img/Modern_Teal_small.jpg"></a>
+        <a href=""><img src="img/Professional_Black_small.jpg"></a>
+    </div>
+    <div class="cvpart5">
+        <a href="" style="text-decoration: none;"><h1>Miami</h1></a>
+        <a href="" style="text-decoration: none;"><h1>Modern_Teal</h1></a>
+        <a href="" style="text-decoration: none;"><h1>Profession</h1></a>
+        
+    </div>
+</div>
+
+
+  <!--============== Footer==============  -->
+<div class="footera">
+    <div class="footerhead">
+        <div class="footerlogo"><a href=""><img src=""></a></div>
+        <div class=""><a href="">Popular Links</a></div>
+        <div class=""><a href="">Top Resources</a></div>
+        <div class=""><a href="">Our Company</a></div>
+    </div>
+    <div class="footersection">
+        <div class="footersecond">
+            <div class="a"><a href="">Blog</a></div>
+            <div class="a"><a href="">Resume Builder</a></div>
+            <div class="a"><a href="">CV Builder</a></div>
+            <div class="a"><a href="">Help Center</a></div>
+        </div>
+        <div class="footersecond">
+            <div class="a"><a href="">Resume Samples</a></div>
+            <div class="a"><a href="">Resume Templates</a></div>
+            <div class="a"><a href="">CV Examples</a></div>
+            <div class="a"><a href="">CV Templates</a></div>
+        </div>
+        <div class="footersecond">
+            <div class="a"><a href="">About Us</a></div>
+            <div class="a"><a href="">Partner Materials</a></div>
+            <div class="a"><a href="">Contact Us</a></div>
+            <div class="a"><a href="">Press</a></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<hr>
+<div class="term">
+    <p>Copyright @ 2021 Ashish</p>
+    <a href="">Terms of Use</a>
+    <a href="">Privacy Policy</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    /*  ============== Part 3 sliderImg============== */
+   var myIndex = 0;
+function carousel() 
+{
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+
+    for (i = 0; i < x.length; i++)
+    {
+            x[i].style.display = "none";  
+    }
+
+    myIndex++;
+    if (myIndex > x.length) 
+    {
+        myIndex = 1
+        }    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000);
+}
+carousel();
+/*  ============== Part 3 sliderImg============== */
+</script>
+    
+</body>
+</html>

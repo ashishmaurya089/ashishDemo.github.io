@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.topnav{
+
+    display: flex;
+    background-color:slategrey;
+    height: 70px;
+    width: 100%;
+}
+.logo{
+    height: 40px;
+    width: 30px;
+    margin: 11px 32% 10px 40px;
+}
+.logo a{
+    border-radius: 20px ;
+    padding: 5px 15px ;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    background-color: white;
+}
+.navitem{
+    height: 20px;
+    padding: 10px;
+    margin: 15px 20px 20px 0px;  
+    text-decoration: none;
+}
+.navitem a{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+}
+.navitem a:hover{
+    color:orangered;
+}
+#myaccountbutton a{
+    margin: 20px;
+    padding: 10px 25px;
+    color: steelblue;
+    background-color: rgb(240, 255, 255);
+    border-radius: 50px;
+}
+#myaccountbutton a:hover{
+    background-color:orangered;
+    color: white;
+}
+
+/*  ============== Part 2 start button============== */
+.headpart2{
+    text-align: center;
+}
+.headpart2 h1{
+    margin: 00px 0px 15px 0px;
+}
+.headpart2 p{
+    font-size: 19px;
+}
+#easy{
+    font-size: 21px;
+    font-weight: bold;
+} 
+.startpart2 {
+    margin: 50px 44%;
+} 
+.startpart2 a {
+    color: white;
+    text-decoration: none;
+    background-color:slategrey;
+    padding: 10px 50px;
+    border-radius: 20px;
+
+}
+.startpart2 a:hover{
+    color:white;
+    background-color:orangered;
+}
+/*  ============== Part 3 sliderImg============== */
+.sliderbox{
+    width: 100%;
+    height: 350px;
+}
+.sliderImg img{
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 700px;
+    height: 350px;
+}
+.mySlides {
+    display:none;
+}
+/*  ============== Part4============== */
+.part4{
+    height: 200px;
+    width: 100%;
+    background-color: #cccccc;
+}
+.buttonGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 50px;
+    
+}
+.buttonGame a{
+    margin: 70px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    background-color: cornflowerblue;
+    padding: 20px 50px;
+    border-radius: 10px;  
+}
+.buttonGame a:hover{
+    background-color: orangered;
+
+}
+/*  ============== Part5============== */
+.cvpart{
+   
+}
+.cvpart5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #737373;
+}
+
+.cvpart5 a img{
+    height: 300px;
+    width: 220px;
+    padding: 70px 50px 0px 50px;
+    
+}
+.cvpart5 a h1{
+    height: 50px;
+    width: 120px;
+    padding: 0px 50px 0px 50px;
+    margin: 0px 50px;
+    text-decoration: none;
+}
+.cvpart5 a h1:hover{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+.cvpart5 a img:hover{
+    opacity: 0.3;
+}
+
+/*  ============== Footer============== */
+.footera{
+    background-color:slategrey;
+    padding-top: 60px;
+    width: 100%;
+    height: 320px;
+   
+}
+.footerhead{
+    display: flex;
+    margin:50px 0px 0px 30px ;
+}
+.footerhead a{
+    padding: 70px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.footerlogo{
+    margin-right: 200px;
+    margin-left:130px;
+}
+
+.footersecond{
+    margin:50px 110px 0px 30px ; 
+}
+
+.footersection{
+    margin-left:555px;
+    display: flex;
+}
+.footersection a{
+    line-height: 1.7;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.footersection a:hover{
+    color: orangered;
+}
+.term{
+    color: white;
+    display: flex;
+    padding: 15px 50px 10px 40px;
+}
+.term a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+}
+.term a:hover{
+    color: orangered;
+}

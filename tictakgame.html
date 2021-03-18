@@ -1,0 +1,273 @@
+<!DOCTYPE.html>
+<html>
+
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+}
+#frame{
+	width:320px;
+	border:10px solid black;
+	margin-top:50px;
+	margin-left:500px;;
+	text-align:center;
+	position:relative;
+	font-size:80px;
+	color:blueviolet;
+}
+#box1{
+	border:5px solid black;
+	height:100px;	
+	width:100px;
+}
+#box2{
+	border:5px solid black;
+	height:95px;
+	width:100px;
+}
+#box3{
+	height:95px;
+	width:100px;
+	border:5px solid black;
+}
+#box4{
+	height:100px;
+	width:100px;
+	position:absolute;
+	top:0;
+	left:110px;
+	border:5px solid black;
+	
+}
+#box5{
+	height:100px;
+	width:100px;
+	position:absolute;
+	top:110;
+	left:110px;
+	border:5px solid black;
+}
+#box6{
+	height:100px;
+	width:100px;
+	position:absolute;
+	top:210;
+	left:110px;
+	border:5px solid black;
+}
+#box7{
+	height:100px;
+	width:100px;
+	position:absolute;
+	top:0;
+	left:210px;	
+	border:5px solid black;
+}
+#box8{
+	height:100px;
+	width:100px;
+	position:absolute;
+	top:110;
+	left:210px;	
+	border:5px solid black;
+}
+#box9{
+	height:100px;
+	width:100px;
+	position:absolute;			
+	top:210;
+	left:210px;	
+	border:5px solid black;
+}
+#reset{
+	width:100px;
+	height:50px;
+	font-size:20px;
+	margin-left:250;
+}
+#winner{
+	height:50px;
+	font-size:30px;
+	margin-left:230;
+
+}
+.butt{
+	margin-left: 370px;
+}
+.topnav{
+
+display: flex;
+background-color:slategrey;
+height: 70px;
+width: 100%;
+}
+.logo{
+height: 40px;
+width: 30px;
+margin: 11px 32% 10px 40px;
+}
+.logo a{
+border-radius: 20px ;
+padding: 5px 15px ;
+color: black;
+text-decoration: none;
+font-size: 40px;
+background-color: white;
+}
+.navitem{
+height: 20px;
+padding: 10px;
+margin: 15px 20px 20px 0px;  
+text-decoration: none;
+}
+.navitem a{
+text-decoration: none;
+font-size: 17px;
+color: white;
+}
+.navitem a:hover{
+color:orangered;
+}
+#myaccountbutton a{
+margin: 20px;
+padding: 10px 25px;
+color: steelblue;
+background-color: rgb(240, 255, 255);
+border-radius: 50px;
+}
+#myaccountbutton a:hover{
+background-color:orangered;
+color: white;
+}
+
+</style>
+</head>
+<body>
+	<div>   
+		<nav class="topnav">
+			<div class="logo"><a href="">ASHISH</a></div>
+			<div class="navitem"><a href="">Tools</a></div>
+			<div class="navitem"><a href="">Resume</a></div>
+			<div class="navitem"><a href="">CV</a></div>
+			<div class="navitem"><a href="">Cover Letter</a></div>
+			<div class="navitem"><a href="">Career Blog</a></div>
+			<div class="navitem" ><a href="">About</a></div>
+			<div class="navitem" id="myaccountbutton"><a href="">MY ACCOUNT</a></div>
+		</nav>
+	</div>
+<form>
+<div  id="frame">
+	<div onclick="gamediv()"  id="box1" class="gameArea"></div>
+	<div onclick="gamediv()" id="box2" class="gameArea" ></div>
+	<div onclick="gamediv()" id="box3" class="gameArea"></div>
+	<div  onclick="gamediv()" id="box4" class="gameArea"></div>
+	<div  onclick="gamediv()" id="box5" class="gameArea"></div>
+	<div  onclick="gamediv()" id="box6" class="gameArea"></div>
+	<div onclick="gamediv()"  id="box7"  class="gameArea"></div>
+	<div  onclick="gamediv()" id="box8" class="gameArea" ></div>
+	<div  onclick="gamediv()" id="box9"  class="gameArea"></div>
+</div>
+<br>
+<br>
+<div class="butt">
+<h2 id="winner" style="color:red"></h2>
+<br>
+
+<button id="reset" onclick="reset()" type="submit">Reset</button>
+</div>
+</form>
+</body>
+
+
+	<script>
+	var temp = 1;
+var count = 1;
+function gamediv()
+{
+	
+		if(count <=7)
+		{
+			var x = document.getElementById(event.target.id);
+			console.log(event.target.id);
+			if(temp==0)
+			{
+				x.innerHTML = "X"
+				temp = 1;
+				console.log(temp);
+			}
+			else
+			{
+				x.innerHTML = "O"
+				temp =0;
+				console.log(temp);
+			}
+			count++;
+			console.log(count);
+		}
+		else
+		{
+			
+			document.getElementById("winner").innerHTML = "drew"
+			reset();
+			console.log(count);
+		}
+		
+		
+		if(document.getElementById("box1").innerHTML!=""	&&	document.getElementById("box2").innerHTML!=""	&&	 document.getElementById("box3").innerHTML!=""
+		&&	 document.getElementById("box1").innerHTML==	document.getElementById("box2").innerHTML	&& 	document.getElementById("box2").innerHTML==	document.getElementById("box3").innerHTML
+		||
+			document.getElementById("box4").innerHTML!=""	&&	document.getElementById("box5").innerHTML!=""	&&	 document.getElementById("box6").innerHTML!=""
+		&&	 document.getElementById("box4").innerHTML==	document.getElementById("box5").innerHTML	&& 	document.getElementById("box5").innerHTML==	document.getElementById("box6").innerHTML
+		||
+			document.getElementById("box7").innerHTML!=""	&&	document.getElementById("box8").innerHTML!=""	&&	 document.getElementById("box9").innerHTML!=""
+		&&	 document.getElementById("box7").innerHTML==	document.getElementById("box8").innerHTML	&& 	document.getElementById("box8").innerHTML==	document.getElementById("box9").innerHTML
+		||
+			document.getElementById("box1").innerHTML!=""	&&	document.getElementById("box4").innerHTML!=""	&&	 document.getElementById("box7").innerHTML!=""
+		&&	 document.getElementById("box1").innerHTML==	document.getElementById("box4").innerHTML	&& 	document.getElementById("box4").innerHTML==	document.getElementById("box7").innerHTML
+		||
+			document.getElementById("box2").innerHTML!=""	&&	document.getElementById("box5").innerHTML!=""	&&	 document.getElementById("box8").innerHTML!=""
+		&&	 document.getElementById("box2").innerHTML==	document.getElementById("box5").innerHTML	&& 	document.getElementById("box5").innerHTML==	document.getElementById("box8").innerHTML
+		||
+			document.getElementById("box7").innerHTML!=""	&&	document.getElementById("box6").innerHTML!=""	&&	 document.getElementById("box9").innerHTML!=""
+		&&	 document.getElementById("box7").innerHTML==	document.getElementById("box6").innerHTML	&& 	document.getElementById("box6").innerHTML==	document.getElementById("box9").innerHTML
+		||
+			document.getElementById("box1").innerHTML!=""	&&	document.getElementById("box5").innerHTML!=""	&&	 document.getElementById("box9").innerHTML!=""
+		&&	 document.getElementById("box1").innerHTML==	document.getElementById("box5").innerHTML	&& 	document.getElementById("box5").innerHTML==	document.getElementById("box9").innerHTML
+		||
+			document.getElementById("box7").innerHTML!=""	&&	document.getElementById("box5").innerHTML!=""	&&	 document.getElementById("box3").innerHTML!=""
+		&&	 document.getElementById("box7").innerHTML==	document.getElementById("box5").innerHTML	&& 	document.getElementById("box5").innerHTML==	document.getElementById("box3").innerHTML)
+		{
+			if(temp==0)
+			{
+				document.getElementById("winner").innerHTML = "O is winner"	;
+				reset();
+			}
+			else
+			{
+				document.getElementById("winner").innerHTML = "X is winner"	
+				reset();
+			}
+		reset();
+		}		
+}
+function reset(){
+	document.getElementById("box1").innerHTML=null;
+	document.getElementById("box2").innerHTML=null;
+	document.getElementById("box3").innerHTML=null;
+	document.getElementById("box4").innerHTML=null;
+	document.getElementById("box5").innerHTML=null;
+	document.getElementById("box6").innerHTML=null;
+	document.getElementById("box7").innerHTML=null;
+	document.getElementById("box8").innerHTML=null;
+	document.getElementById("box9").innerHTML=null;
+
+	temp=1;
+	count=0;
+	
+}
+reset();
+
+	</script>
+</html>

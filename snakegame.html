@@ -1,0 +1,201 @@
+<!DOCTYPE.html>
+<html>
+<head>
+	<title>Snake Game</title>
+	<link rel="stylesheet" href="learn.css">
+    <style>
+        
+            *{
+                margin:0;
+                padding:0;
+            }
+                    .topnav{
+                    display: flex;
+                    background-color:slategrey;
+                    height: 70px;
+                    width: 100%;
+                    }
+                    .logo{
+                    height: 40px;
+                    width: 30px;
+                    margin: 11px 32% 10px 40px;
+                    }
+                    .logo a{
+                    border-radius: 20px ;
+                    padding: 5px 15px ;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 40px;
+                    background-color: white;
+                    }
+                    .navitem{
+                    height: 20px;
+                    padding: 10px;
+                    margin: 15px 20px 20px 0px;  
+                    text-decoration: none;
+                    }
+                    .navitem a{
+                    text-decoration: none;
+                    font-size: 17px;
+                    color: white;
+                    }
+                    .navitem a:hover{
+                    color:orangered;
+                    }
+                    #myaccountbutton a{
+                    margin: 20px;
+                    padding: 10px 25px;
+                    color: steelblue;
+                    background-color: rgb(240, 255, 255);
+                    border-radius: 50px;
+                    }
+                    #myaccountbutton a:hover{
+                    background-color:orangered;
+                    color: white;
+                    }
+
+            canvas{
+                padding:auto;
+                background-color:darkslategray;
+                border:20px solid black;
+                margin-left: 400px;
+                margin-top: 20px;
+
+            }
+            
+    </style>
+	
+</head>
+<body>  
+    <div>   
+        <nav class="topnav">
+            <div class="logo"><a href="">ASHISH</a></div>
+            <div class="navitem"><a href="">Tools</a></div>
+            <div class="navitem"><a href="">Resume</a></div>
+            <div class="navitem"><a href="">CV</a></div>
+            <div class="navitem"><a href="">Cover Letter</a></div>
+            <div class="navitem"><a href="">Career Blog</a></div>
+            <div class="navitem" ><a href="">About</a></div>
+            <div class="navitem" id="myaccountbutton"><a href="">MY ACCOUNT</a></div>
+        </nav>
+    </div>
+<canvas id="game" width="500" height="500">
+	
+</canvas>
+
+<script>
+
+var  cvs = document.getElementById("game");
+var ctx = cvs.getContext("2d");
+var snakeW = 10;
+var snakeH = 10;
+var dir = "right"
+
+//Draw snake
+
+function drawSnake(x,y){
+	
+	ctx.fillStyle = "white";
+	ctx.fillRect ( x*snakeW , y*snakeH , snakeW , snakeH );	
+	
+	ctx.fillStyle = "black";
+	ctx.strokeRect( x*snakeW , y*snakeH , snakeW , snakeH )
+	
+}
+// creat Snake
+var len =4;
+snake =[];
+for( var i=len-1;i>=0;i--){
+	snake.push({
+		x:i,
+		y:0,	
+	})	
+//control 
+	document.addEventListener("keydown",dirControl)
+function dirControl(e){
+	if(e.keyCode==37 && dir!="right"){
+		dir="left"
+	}
+	else if(e.keyCode==38 && dir!="down"){
+		dir="up"
+	}
+	else if(e.keyCode==39 && dir!="left"){
+		dir="right"
+	}
+	else if(e.keyCode==40 && dir!="up"){
+		dir="down"
+	}
+}	
+//creat food
+var food={
+	x:Math.floor(Math.random() * (cvs.width/snakeW -1)+ 1),
+	y:Math.floor(Math.random() * (cvs.height/snakeH -1)+ 1)
+}
+//draw food
+function drawFood(x,y){
+	ctx.fillStyle = "yellow";
+	ctx.fillRect ( x*snakeW , y*snakeH , snakeW , snakeH );	
+	
+	ctx.fillStyle = "black";
+	ctx.strokeRect( x*snakeW , y*snakeH , snakeW , snakeH )
+	
+}	
+	
+}//draw function
+function draw(){
+	ctx.clearRect(0,0,cvs.width,cvs.height);
+	for(var i=0;i<snake.length;i++){
+		var X = snake[i].x;
+		var Y = snake[i].y;
+		drawSnake(X,Y)
+	}
+	drawFood(food.x,food.y);
+//snake head	
+	var snakeX = snake[0].x;
+	var snakeY = snake[0].y;
+	
+	if(snakeX<0 || snakeY<0 || snakeX>=cvs.width/snakeW || snakeY>=cvs.height/snakeH){
+		confirm("game Over");
+	}
+	
+	if(dir == "right"){
+		snakeX++
+	}
+	else if(dir == "left"){
+		snakeX--
+	}
+	else if(dir == "up"){
+		snakeY--
+	}
+	else if(dir == "down"){
+		snakeY++
+	}
+	
+	if( snakeX==food.x && snakeY==food.y){
+		food={
+				x:Math.floor(Math.random() * (cvs.width/snakeW -1)+ 1),
+				y:Math.floor(Math.random() * (cvs.height/snakeH -1)+ 1)
+		}
+	var newHead = {
+			x: snakeX,
+			y: snakeY
+		}
+	}
+	else{
+		snake.pop();
+	}
+//new Head
+	var newHead = {
+		x: snakeX,
+		y: snakeY
+	}
+	
+	snake.unshift(newHead);
+}	
+setInterval(draw,100)
+ 
+
+</script>
+
+</body>
+</html>
